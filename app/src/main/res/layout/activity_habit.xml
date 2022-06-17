@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HabitActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:id="@+id/top_frame"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/habit_set_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="Habit Name"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button_edit_title"
+                    android:layout_width="58dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="0"
+                    android:text="Edit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    app:backgroundTint="@android:color/holo_green_light"
+                    app:cornerRadius="8dp"
+                    app:rippleColor="#33AAAAAA"
+                     />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/notes_label"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="5dp"
+                android:text="Notes"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+
+            <EditText
+                android:id="@+id/notes_text"
+                android:layout_width="match_parent"
+                android:layout_height="153dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/timer_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:text="Timer: "
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/timer_time_entered"
+                            android:layout_width="183dp"
+                            android:layout_height="64dp"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="time"
+                            android:text="5"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/timer_interval_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp">
+
+                        <RadioButton
+                            android:id="@+id/minutes_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Minutes"
+                            android:checked="true"
+                            android:layout_marginStart="10dp"/>
+
+                        <RadioButton
+                            android:id="@+id/seconds_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seconds"
+                           />
+                    </RadioGroup>
+
+                    <!--https://www.journaldev.com/9976/android-date-time-picker-dialog-->
+
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp" />
+
+                    <Button
+                        android:id="@+id/timer_launch_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0"
+                        android:text="Launch Timer"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:backgroundTint="@android:color/holo_green_light"
+                        app:cornerRadius="8dp"
+                        app:rippleColor="#33AAAAAA"
+                        android:layout_marginTop="10dp"
+                        android:layout_margin="5dp"/>
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/goal_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Goal"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <Button
+                                    android:id="@+id/goal_decrement_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="30sp"
+                                    android:textStyle="bold"
+                                    app:backgroundTint="@android:color/holo_green_light"
+                                    app:cornerRadius="8dp"
+                                    app:rippleColor="#33AAAAAA"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/goal_edit"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:ems="10"
+                                    android:gravity="center_horizontal"
+                                    android:inputType="number"
+                                    android:text="1"
+                                    android:textColor="@color/black"
+                                    android:textSize="30sp" />
+
+                                <Button
+                                    android:id="@+id/goal_increment_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="+"
+                                    android:layout_marginEnd="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="30sp"
+                                    android:textStyle="bold"
+                                    app:backgroundTint="@android:color/holo_green_light"
+                                    app:cornerRadius="8dp"
+                                    app:rippleColor="#33AAAAAA"
+                                     />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioGroup
+                                    android:id="@+id/interval_radio_group"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="20dp"
+
+                                    >
+
+                                    <RadioButton
+                                        android:id="@+id/goal_button_daily"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Daily"
+                                        android:textSize="18sp"
+                                        android:textColor="@color/black" />
+
+                                    <RadioButton
+                                        android:id="@+id/goal_button_weekly"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+
+                                        android:text="Weekly"
+                                        android:textSize="18sp"
+                                        android:textColor="@color/black" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/completed_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+
+                                android:text="Completed:"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <Button
+                                    android:id="@+id/complete_decrement_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="-"
+                                    android:textColor="@color/black"
+                                    android:textSize="30sp"
+                                    android:textStyle="bold"
+                                    app:backgroundTint="@android:color/holo_green_light"
+                                    app:cornerRadius="8dp"
+                                    app:rippleColor="#33AAAAAA"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/completed_count"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:ems="10"
+                                    android:gravity="center_horizontal"
+                                    android:inputType="number"
+                                    android:text="1"
+                                    android:textColor="@color/black"
+                                    android:textSize="30sp" />
+
+                                <Button
+                                    android:id="@+id/complete_increment_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="+"
+                                    android:layout_marginEnd="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="30sp"
+                                    android:textStyle="bold"
+                                    app:backgroundTint="@android:color/holo_green_light"
+                                    app:cornerRadius="8dp"
+                                    app:rippleColor="#33AAAAAA"
+                                     />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reminders_label"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="5dp"
+                android:text="Reminders"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/reminders_radio_group"
+                    android:layout_width="197dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+
+                    >
+
+                    <RadioButton
+                        android:id="@+id/reminders_off_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:checked="true"
+                        android:text="Off"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/reminders_on_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+
+                        android:text="On"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/reminder_time_entered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center"
+                        android:text="3:34PM"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <Button
+                        android:id="@+id/reminder_time_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:gravity="center_horizontal"
+                        android:text="SELECT TIME"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="10dp"
+                        app:backgroundTint="@android:color/holo_green_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
